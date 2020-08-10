@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/bookmark-icon/budget.svg">
+    <title>Finance Manager</title>
+    <!-- Google fonts import - Dancing Script  and Montserat-->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;562;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome kit -->
+    <script src="https://kit.fontawesome.com/ac750a2c2d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="title">
+            <i class="fas fa-wallet"></i> Budget
+        </h1>
+        <p class="subtitle">Your personal finance manager.</p>
+    </header>
+
+    <main>
+        <!-- Section transactions -->
+        <section class="transactions">
+            <h2 class="transactions-title">Transactions list</h2>
+            <div class="transactions-list">
+                <!-- Income Area -->
+                <div class="income-area">
+                    <h3 class="income">Income:</h3>
+
+                </div>
+
+                <!-- Exxpenses Area -->
+                <div class="expenses-area">
+                    <h3 class="expenses">Expenses:</h3>
+
+                </div>
+            </div>
+        </section>
+        <!-- Options section -->
+        <section class="options">
+            <div>
+                <h2 class="transactions-title">Available funds:</h2>
+                <p class="available-funds">0 PLN</p>
+            </div>
+            <!-- Controls -->
+            <div class="controls">
+                <button class="add-transaction"><i class="fas fa-plus"></i> Add transaction
+                </button>
+                <button class="delete-all"><i class="far fa-trash-alt"></i> Delete all transactions</button>
+            </div>
+            <!-- Style selection options -->
+            <div class="style-selection">
+                <h4 class="style-title">Choose the style</h4>
+                <div class="color-buttons">
+                    <button class="light"></button>
+                    <button class="dark"></button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Add transaction panel - modal -->
+    <div class="add-transaction-panel">
+        <h5 class="add-title">Add new transaction</h5>
+
+        <label for="name">Name:</label>
+        <small>(Enter the transaction name)</small>
+        <input type="text" id="name" class="name">
+
+        <label for="amount">Amount:</label>
+        <small>(Enter the transaction amount)</small>
+        <input type="number" id="amount" class="amount">
+
+        <label for="category">Choose category:</label>
+        <small>( [ + ] means income,  [ - ] means expenditure)</small>
+        <select id="category">
+            <option value="none"  selected disabled>-- Type of transaction --</option>
+            <option value="income">[ + ] Income</option>
+            <option value="shopping">[ - ] Shopping</option>
+            <option value="food">[ - ] Food</option>
+            <option value="cinema">[ - ] Cinema</option>
+            <option value="other-expenses">[ - ] Other expenses</option>
+        </select>
+        <div class="panel-buttons">
+            <button class="save"><i class="fas fa-save"></i> Save</button>
+            <button class="cancel"><i class="far fa-window-close"></i> Cancel</button>
+        </div>
+    </div>
+
+
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
